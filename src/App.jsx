@@ -17,7 +17,7 @@ function App() {
     try {
       setLoading(true);
       setError(null);
-      const apiKey = '19f81c3663f548efa66648ab787fac66'; // Substitua por sua chave válida
+      const apiKey = '19f81c3663f548efa66648ab787fac66';
       const resp = await axios.get(`https://api.spoonacular.com/recipes/random?number=3&apiKey=${apiKey}`);
 
       if (resp.data?.recipes) {
@@ -64,7 +64,6 @@ function App() {
   ];
 
   useEffect(() => {
-    // Simula um "carregamento" falso com setTimeout
     setLoading(true);
     setTimeout(() => {
       setRecipes(mockRecipes);
@@ -91,7 +90,7 @@ function App() {
       </header>
 
       {/* Home */}
-      <section id="home" className="pt-40 pb-20 bg-[#F5EBDD] text-center px-4">
+      <section id="home" className="pt-100 pb-80 bg-[#F5EBDD] text-center px-4">
         <h2 className="text-5xl md:text-6xl font-extrabold mb-4 text-[#78866B]">
           Bem-vindo à Delice & Co!
         </h2>
@@ -132,7 +131,7 @@ function App() {
         </div>
       </section>
 
-      {/* Receitas da API */}
+      {/* Codigo Api Funcionando - Receitas da API */}
       {/*
       <section id="receitas" className="bg-[#F5EBDD] py-40 px-4">
         <div className="max-w-6xl mx-auto">
